@@ -52,7 +52,7 @@ function emailValid(){
 }
 function MessageValid(){
     var Text=document.getElementById("textmsg").value 
-    var msgSpan=document.getElementById("msgfield ");
+    var msgSpan=document.getElementById("msgfield");
        
     if(Text==""){
         msgSpan.innerHTML="Filed is required"
