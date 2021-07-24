@@ -19,20 +19,41 @@ function nameValid(){
 function PhoneValid(){
     var phone=document.getElementById("textphone").value 
     var phoneSpan=document.getElementById("phonefield");
-    var letters= /^\d{10}$/;
+    var letters= /^\d+$/;
     if(phone==""){
         phoneSpan.innerHTML="Filed is required"
         return false;}
-    else if(phone.match(letters)){
+    else if(phone.match(letters)&&(phone.length==10)){
         phoneSpan.innerHTML="";
         return true;
     }
-    else{
-        phoneSpan.innerHTML="invalid number";
+    else if(phone.length<10)
+    {
+        if(phone.match(letters))
+        {
+            phoneSpan.innerHTML="enter atleast 10 numbers";
+            return false;
+        }
+    
+  
+    }
+      else if(phone.length>10)
+          {
+    if(phone.match(letters))
+    {
+        phoneSpan.innerHTML="please enter 10 numbers only";
         return false;
     }
     
+  
+   }
+
+
+
 }
+    
+    
+
 function emailValid(){
     var name=document.getElementById("textemail").value 
     var emailSpan=document.getElementById("emailfield");

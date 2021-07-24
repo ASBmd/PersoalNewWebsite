@@ -224,7 +224,7 @@
               </div>
               <div class="form-group col-md-6">
                 <label>Phone number</label>
-                <input type="text" onkeyup="PhoneValid()" class="form-control" id="textphone" name="Phone number" placeholder="Phone number">
+                <input type="text" oninput="this.value=this.value.replace(/[^\d]/,'')"  onkeyup="PhoneValid()" class="form-control" id="textphone" name="Phone number" placeholder="Phone number">
                  <p style="color: #a52a2a;" id="phonefield"></p>
               </div>
             </div>
