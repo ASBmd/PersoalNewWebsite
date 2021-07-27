@@ -2,7 +2,7 @@
 function nameValid(){
     var name=document.getElementById("textname").value 
     var nameSpan=document.getElementById("namefield");
-    var letters= /^[a-zA-Z\s]*$/;
+    var letters= /^[-a-zA-Z-()\s]+(\s+[-a-zA-Z-()\s]+)*$/;
     if(name==""){
         nameSpan.innerHTML="Filed is required"
         return false;}
@@ -37,7 +37,7 @@ function PhoneValid(){
     
   
     }
-      else if(phone.length>10)
+      /*else if(phone.length>10)
           {
     if(phone.match(letters))
     {
@@ -46,7 +46,7 @@ function PhoneValid(){
     }
     
   
-   }
+   }*/
 
 
 
@@ -57,7 +57,7 @@ function PhoneValid(){
 function emailValid(){
     var name=document.getElementById("textemail").value 
     var emailSpan=document.getElementById("emailfield");
-    var letters=  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var letters= /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
     if(name==""){
         emailSpan.innerHTML="Filed is required"
         return false;}
